@@ -1,4 +1,7 @@
-# BubbleTransition
+<p align="center">
+  <img src="assets/logo.png"/>
+</p>
+
 A custom modal transition that presents and dismiss a controller inside an expanding and shrinking _bubble_.
 
 # Usage
