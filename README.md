@@ -2,6 +2,8 @@
   <img src="assets/logo.png"/>
 </p>
 
+[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/BubbleTransition/badge.svg)](http://cocoapods.org/?q=bubbletransition)
+
 A custom modal transition that presents and dismiss a controller inside an expanding and shrinking _bubble_.
 
 # Usage
