@@ -6,6 +6,9 @@
 
 A custom modal transition that presents and dismiss a controller inside an expanding and shrinking _bubble_.
 
+# Screenshot
+![BubbleTransition](https://raw.githubusercontent.com/andreamazz/BubbleTransition/master/assets/screenshot.gif)
+
 # Usage
 Install through [Cocoapods](http://cocoapods.org)
 ```
@@ -63,9 +66,6 @@ var bubbleColor: UIColor = .whiteColor()
 The color of the bubble. Make sure that it matches the destination controller's background color.  
 
 Checkout the sample project for the full implementation.
-
-# Screenshot
-![BubbleTransition](https://raw.githubusercontent.com/andreamazz/BubbleTransition/master/assets/screenshot.gif)
 
 #MIT License
 
