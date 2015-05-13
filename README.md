@@ -11,22 +11,54 @@ pod 'BubbleTransition', '~> 0.1'
 
 use_frameworks!
 ```
-Setup the transition:
+#Setup
+Have your viewcontroller conform to `UIViewControllerTransitioningDelegate`. Set the `transitionMode`, the `startingPoint`, the `bubbleColor` and the `duration`.
 ```swift
 let transition = BubbleTransition()
+
+override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let controller = segue.destinationViewController as! UIViewController
+    controller.transitioningDelegate = self
+    controller.modalPresentationStyle = .Custom
+}
+
+// MARK: UIViewControllerTransitioningDelegate
 
 func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     transition.transitionMode = .Present
     transition.startingPoint = someButton.center
+    transition.bubbleColor = someButton.backgroundColor!
     return transition
 }
 
 func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     transition.transitionMode = .Dismiss
     transition.startingPoint = someButton.center
+    transition.bubbleColor = someButton.backgroundColor!
     return transition
 }
 ```
+
+#Properties
+```swift
+var startingPoint = CGPointZero
+```
+The point that originates the bubble.
+
+```swift
+var duration = 0.5
+```
+The transition duration.
+
+```swift
+var transitionMode: BubbleTranisionMode = .Present
+```
+The transition direction. Either `.Present` or `.Dismiss`.
+
+```swift
+var bubbleColor: UIColor = .whiteColor()
+```
+The color of the bubble. Make sure that it matches the destination controller's background color.  
 
 Checkout the sample project for the full implementation.
 

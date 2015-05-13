@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
     public var startingPoint = CGPointZero
@@ -69,6 +67,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             }
         }
     }
+    
     public enum BubbleTranisionMode: Int {
         case Present, Dismiss
     }
