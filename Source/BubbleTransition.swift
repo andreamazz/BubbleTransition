@@ -69,7 +69,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             presentedControllerView.alpha = 0
             containerView.addSubview(presentedControllerView)
 
-            UIView.animateWithDuration(duration, animations: { () -> Void in
+            UIView.animateWithDuration(duration, animations: {
                 self.bubble!.transform = CGAffineTransformIdentity
                 presentedControllerView.transform = CGAffineTransformIdentity
                 presentedControllerView.alpha = 1
@@ -81,7 +81,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             let returningController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
             let returningControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
 
-            UIView.animateWithDuration(duration, animations: { () -> Void in
+            UIView.animateWithDuration(duration, animations: {
                 self.bubble!.transform = CGAffineTransformMakeScale(0.001, 0.001)
                 returningControllerView.transform = CGAffineTransformMakeScale(0.001, 0.001)
                 returningControllerView.center = self.startingPoint
