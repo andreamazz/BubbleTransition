@@ -1,15 +1,15 @@
 //
-//  BubbleTransitionTests.swift
-//  BubbleTransitionTests
+//  DemoTests.swift
+//  DemoTests
 //
-//  Created by Andrea Mazzini on 12/05/15.
+//  Created by Andrea Mazzini on 13/05/15.
 //  Copyright (c) 2015 Fancy Pixel. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class BubbleTransitionTests: XCTestCase {
+class DemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

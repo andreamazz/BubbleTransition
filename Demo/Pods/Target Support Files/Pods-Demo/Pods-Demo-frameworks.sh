@@ -8,7 +8,7 @@ SWIFT_STDLIB_PATH="${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}"
 
 install_framework()
 {
-  local source="${BUILT_PRODUCTS_DIR}/Pods-BubbleTransition/$1"
+  local source="${BUILT_PRODUCTS_DIR}/Pods-Demo/$1"
   local destination="${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
   if [ -L "${source}" ]; then

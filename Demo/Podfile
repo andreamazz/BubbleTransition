@@ -1,11 +1,11 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '6.0'
 
-target 'BubbleTransition' do
+target 'Demo' do
   pod 'BubbleTransition', path: '../'
 end
 
-target 'BubbleTransitionTests' do
+target 'DemoTests' do
 
 end
 

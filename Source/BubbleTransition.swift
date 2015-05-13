@@ -1,14 +1,22 @@
+//
+//  BubbleTransition.swift
+//  BubbleTransition
+//
+//  Created by Andrea Mazzini on 04/04/15.
+//  Copyright (c) 2015 Fancy Pixel. All rights reserved.
+//
+
 import UIKit
 
-public enum BubbleTranisionMode: Int {
-    case Present, Dismiss
-}
+
 
 public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
     public var startingPoint = CGPointZero
     public var duration = 0.5
     public var transitionMode: BubbleTranisionMode = .Present
+    public var bubbleColor: UIColor = .whiteColor()
+    
     private var bubble: UIView?
 
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
@@ -29,7 +37,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             bubble!.layer.cornerRadius = size.height / 2
             bubble!.center = startingPoint
             bubble!.transform = CGAffineTransformMakeScale(0.001, 0.001)
-            bubble!.backgroundColor = .mainColor()
+            bubble!.backgroundColor = bubbleColor
             containerView.addSubview(bubble!)
 
             presentedControllerView.center = startingPoint
@@ -60,5 +68,8 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
                     transitionContext.completeTransition(true)
             }
         }
+    }
+    public enum BubbleTranisionMode: Int {
+        case Present, Dismiss
     }
 }
