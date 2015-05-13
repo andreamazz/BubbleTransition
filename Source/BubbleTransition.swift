@@ -8,19 +8,45 @@
 
 import UIKit
 
+/**
+A custom modal transition that presents and dismiss a controller with an expanding bubble effect.
+*/
 public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
+    /**
+    The point that originates the bubble.
+    */
     public var startingPoint = CGPointZero
+
+    /**
+    The transition duration.
+    */
     public var duration = 0.5
+
+    /**
+    The transition direction. Either `.Present` or `.Dismiss.`
+    */
     public var transitionMode: BubbleTranisionMode = .Present
+
+    /**
+    The color of the bubble. Make sure that it matches the destination controller's background color.
+    */
     public var bubbleColor: UIColor = .whiteColor()
     
     private var bubble: UIView?
 
+    // MARK: - UIViewControllerAnimatedTransitioning
+
+    /**
+    Required by UIViewControllerAnimatedTransitioning
+    */
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         return duration
     }
 
+    /**
+    Required by UIViewControllerAnimatedTransitioning
+    */
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView()
 
@@ -67,7 +93,10 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             }
         }
     }
-    
+
+    /**
+    The possible directions of the transition
+    */
     public enum BubbleTranisionMode: Int {
         case Present, Dismiss
     }
