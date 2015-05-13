@@ -31,7 +31,7 @@ func animationControllerForDismissedController(dismissed: UIViewController) -> U
 Checkout the sample project for the full implementation.
 
 # Screenshot
-Coming soon
+![BubbleTransition](https://raw.githubusercontent.com/andreamazz/BubbleTransition/master/assets/screenshot.gif)
 
 #MIT License
 
