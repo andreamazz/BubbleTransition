@@ -26,7 +26,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
     /**
     The transition direction. Either `.Present` or `.Dismiss.`
     */
-    public var transitionMode: BubbleTranisionMode = .Present
+    public var transitionMode: BubbleTransitionMode = .Present
 
     /**
     The color of the bubble. Make sure that it matches the destination controller's background color.
@@ -97,7 +97,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
     /**
     The possible directions of the transition
     */
-    public enum BubbleTranisionMode: Int {
+    public enum BubbleTransitionMode: Int {
         case Present, Dismiss
     }
 }
