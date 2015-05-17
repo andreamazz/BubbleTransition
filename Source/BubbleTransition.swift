@@ -55,7 +55,10 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
 
             let originalCenter = presentedControllerView.center
-            let offset = sqrt(startingPoint.x * startingPoint.x + startingPoint.y * startingPoint.y) * 2
+            let originalSize = presentedControllerView.frame.size
+            let lengthX = fmax(startingPoint.x, originalSize.width - startingPoint.x);
+            let lengthY = fmax(startingPoint.y, originalSize.height - startingPoint.y)
+            let offset = sqrt(lengthX * lengthX + lengthY * lengthY) * 2;
             let size = CGSize(width: offset, height: offset)
             bubble = UIView(frame: CGRect(origin: CGPointZero, size: size))
             bubble!.layer.cornerRadius = size.height / 2
