@@ -80,7 +80,31 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 }) { (_) -> Void in
                     transitionContext.completeTransition(true)
             }
-        } else {
+        } 
+		else if transitionMode == .Pop {
+
+			let returningController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+			let returningControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+			let toController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+
+			UIView.animateWithDuration(duration, animations: {
+
+				self.bubble!.transform = CGAffineTransformMakeScale(0.001, 0.001)
+				returningControllerView.transform = CGAffineTransformMakeScale(0.001, 0.001)
+				returningControllerView.center = self.startingPoint
+				returningControllerView.alpha = 0
+				
+				containerView.insertSubview(toController.view, belowSubview: returningControllerView)
+				containerView.insertSubview(self.bubble!, belowSubview: returningControllerView)
+
+				
+				}) { (_) -> Void in
+					returningControllerView.removeFromSuperview()
+					self.bubble!.removeFromSuperview()
+					transitionContext.completeTransition(true)
+			}
+		}        
+        else {
             let returningController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
             let returningControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
 
@@ -101,6 +125,6 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
     The possible directions of the transition
     */
     public enum BubbleTransitionMode: Int {
-        case Present, Dismiss
+        case Present, Dismiss, Pop
     }
 }
