@@ -22,9 +22,10 @@ Have your viewcontroller conform to `UIViewControllerTransitioningDelegate`. Set
 let transition = BubbleTransition()
 
 override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    let controller = segue.destinationViewController as! UIViewController
-    controller.transitioningDelegate = self
-    controller.modalPresentationStyle = .Custom
+    if let controller = segue.destinationViewController as? UIViewController {
+        controller.transitioningDelegate = self
+        controller.modalPresentationStyle = .Custom
+    }
 }
 
 // MARK: UIViewControllerTransitioningDelegate
