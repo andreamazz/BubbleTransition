@@ -121,7 +121,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
     /**
     The possible directions of the transition
     */
-    public enum BubbleTransitionMode: Int {
+    @objc public enum BubbleTransitionMode: Int {
         case Present, Dismiss, Pop
     }
 }
