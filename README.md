@@ -45,6 +45,8 @@ func animationControllerForDismissedController(dismissed: UIViewController) -> U
 }
 ```
 
+You can find the Objective-C equivalent [here](https://gist.github.com/andreamazz/9b0d6c7db065555ec0d7).
+
 #Properties
 ```swift
 var startingPoint = CGPointZero
