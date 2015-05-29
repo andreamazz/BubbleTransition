@@ -67,7 +67,7 @@ The transition duration.
 ```swift
 var transitionMode: BubbleTranisionMode = .Present
 ```
-The transition direction. Either `.Present` or `.Dismiss`.
+The transition direction. Either `.Present`, `.Dismiss` or `.Pop`.
 
 ```swift
 var bubbleColor: UIColor = .whiteColor()
