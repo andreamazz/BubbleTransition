@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65FE57221B18556C003E5FCE /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE57211B18556C003E5FCE /* BubbleTransition.swift */; };
 		A5B3F8581B184AB100729E6E /* BubbleTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = A5B3F8571B184AB100729E6E /* BubbleTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5B3F85E1B184AB200729E6E /* BubbleTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3F8521B184AB100729E6E /* BubbleTransition.framework */; };
-		A5B3F8651B184AB200729E6E /* BubbleTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B3F8641B184AB200729E6E /* BubbleTransitionTests.swift */; };
-		A5B3F86F1B184B2100729E6E /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B3F86E1B184B2100729E6E /* BubbleTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +23,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65FE57211B18556C003E5FCE /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleTransition.swift; path = Source/BubbleTransition.swift; sourceTree = SOURCE_ROOT; };
 		A5B3F8521B184AB100729E6E /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B3F8561B184AB100729E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B3F8571B184AB100729E6E /* BubbleTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleTransition.h; sourceTree = "<group>"; };
 		A5B3F85D1B184AB200729E6E /* BubbleTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5B3F8631B184AB200729E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5B3F8641B184AB200729E6E /* BubbleTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTransitionTests.swift; sourceTree = "<group>"; };
-		A5B3F86E1B184B2100729E6E /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				A5B3F8541B184AB100729E6E /* BubbleTransition */,
-				A5B3F8611B184AB200729E6E /* BubbleTransitionTests */,
 				A5B3F8531B184AB100729E6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				A5B3F8571B184AB100729E6E /* BubbleTransition.h */,
-				A5B3F86E1B184B2100729E6E /* BubbleTransition.swift */,
+				65FE57211B18556C003E5FCE /* BubbleTransition.swift */,
 				A5B3F8551B184AB100729E6E /* Supporting Files */,
 			);
 			path = BubbleTransition;
@@ -84,23 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				A5B3F8561B184AB100729E6E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A5B3F8611B184AB200729E6E /* BubbleTransitionTests */ = {
-			isa = PBXGroup;
-			children = (
-				A5B3F8641B184AB200729E6E /* BubbleTransitionTests.swift */,
-				A5B3F8621B184AB200729E6E /* Supporting Files */,
-			);
-			path = BubbleTransitionTests;
-			sourceTree = "<group>";
-		};
-		A5B3F8621B184AB200729E6E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A5B3F8631B184AB200729E6E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -212,7 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5B3F86F1B184B2100729E6E /* BubbleTransition.swift in Sources */,
+				65FE57221B18556C003E5FCE /* BubbleTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +199,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5B3F8651B184AB200729E6E /* BubbleTransitionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +305,7 @@
 		A5B3F8691B184AB200729E6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -336,12 +315,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A5B3F86A1B184AB200729E6E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
