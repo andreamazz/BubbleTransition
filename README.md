@@ -11,12 +11,17 @@ A custom modal transition that presents and dismiss a controller inside an expan
 ![BubbleTransition](https://raw.githubusercontent.com/andreamazz/BubbleTransition/master/assets/screenshot.gif)
 
 # Usage
-Install through [Cocoapods](http://cocoapods.org)
+Install through [Cocoapods](http://cocoapods.org):
 ```
 pod 'BubbleTransition', '~> 0.1'
 
 use_frameworks!
 ```
+Install through [Carthage](https://github.com/Carthage/Carthage):
+```
+github "andreamazz/BubbleTransition"
+```
+
 #Setup
 Have your viewcontroller conform to `UIViewControllerTransitioningDelegate`. Set the `transitionMode`, the `startingPoint`, the `bubbleColor` and the `duration`.
 ```swift
