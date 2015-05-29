@@ -3,6 +3,7 @@
 </p>
 
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/BubbleTransition/badge.svg)](http://cocoapods.org/?q=bubbletransition)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 A custom modal transition that presents and dismiss a controller inside an expanding and shrinking _bubble_.
 
