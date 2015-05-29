@@ -9,25 +9,13 @@
 /* Begin PBXBuildFile section */
 		65FE57221B18556C003E5FCE /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE57211B18556C003E5FCE /* BubbleTransition.swift */; };
 		A5B3F8581B184AB100729E6E /* BubbleTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = A5B3F8571B184AB100729E6E /* BubbleTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5B3F85E1B184AB200729E6E /* BubbleTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3F8521B184AB100729E6E /* BubbleTransition.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A5B3F85F1B184AB200729E6E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5B3F8491B184AB100729E6E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A5B3F8511B184AB100729E6E;
-			remoteInfo = BubbleTransition;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		65FE57211B18556C003E5FCE /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleTransition.swift; path = Source/BubbleTransition.swift; sourceTree = SOURCE_ROOT; };
 		A5B3F8521B184AB100729E6E /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B3F8561B184AB100729E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B3F8571B184AB100729E6E /* BubbleTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleTransition.h; sourceTree = "<group>"; };
-		A5B3F85D1B184AB200729E6E /* BubbleTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,14 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A5B3F85A1B184AB200729E6E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A5B3F85E1B184AB200729E6E /* BubbleTransition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				A5B3F8521B184AB100729E6E /* BubbleTransition.framework */,
-				A5B3F85D1B184AB200729E6E /* BubbleTransitionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,24 +95,6 @@
 			productReference = A5B3F8521B184AB100729E6E /* BubbleTransition.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A5B3F85C1B184AB200729E6E /* BubbleTransitionTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A5B3F86B1B184AB200729E6E /* Build configuration list for PBXNativeTarget "BubbleTransitionTests" */;
-			buildPhases = (
-				A5B3F8591B184AB200729E6E /* Sources */,
-				A5B3F85A1B184AB200729E6E /* Frameworks */,
-				A5B3F85B1B184AB200729E6E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A5B3F8601B184AB200729E6E /* PBXTargetDependency */,
-			);
-			name = BubbleTransitionTests;
-			productName = BubbleTransitionTests;
-			productReference = A5B3F85D1B184AB200729E6E /* BubbleTransitionTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -144,9 +105,6 @@
 				ORGANIZATIONNAME = "Cosmic Labs";
 				TargetAttributes = {
 					A5B3F8511B184AB100729E6E = {
-						CreatedOnToolsVersion = 6.3.1;
-					};
-					A5B3F85C1B184AB200729E6E = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
@@ -164,20 +122,12 @@
 			projectRoot = "";
 			targets = (
 				A5B3F8511B184AB100729E6E /* BubbleTransition */,
-				A5B3F85C1B184AB200729E6E /* BubbleTransitionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A5B3F8501B184AB100729E6E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A5B3F85B1B184AB200729E6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,22 +145,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5B3F8591B184AB200729E6E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A5B3F8601B184AB200729E6E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A5B3F8511B184AB100729E6E /* BubbleTransition */;
-			targetProxy = A5B3F85F1B184AB200729E6E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A5B3F8661B184AB200729E6E /* Debug */ = {
@@ -335,36 +270,6 @@
 			};
 			name = Release;
 		};
-		A5B3F86C1B184AB200729E6E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BubbleTransitionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A5B3F86D1B184AB200729E6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BubbleTransitionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -382,15 +287,6 @@
 			buildConfigurations = (
 				A5B3F8691B184AB200729E6E /* Debug */,
 				A5B3F86A1B184AB200729E6E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A5B3F86B1B184AB200729E6E /* Build configuration list for PBXNativeTarget "BubbleTransitionTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A5B3F86C1B184AB200729E6E /* Debug */,
-				A5B3F86D1B184AB200729E6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
