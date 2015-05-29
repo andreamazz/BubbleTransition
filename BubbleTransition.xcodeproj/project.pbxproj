@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5B3F8581B184AB100729E6E /* BubbleTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = A5B3F8571B184AB100729E6E /* BubbleTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5B3F85E1B184AB200729E6E /* BubbleTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3F8521B184AB100729E6E /* BubbleTransition.framework */; };
+		A5B3F8651B184AB200729E6E /* BubbleTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B3F8641B184AB200729E6E /* BubbleTransitionTests.swift */; };
+		A5B3F86F1B184B2100729E6E /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B3F86E1B184B2100729E6E /* BubbleTransition.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5B3F85F1B184AB200729E6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B3F8491B184AB100729E6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5B3F8511B184AB100729E6E;
+			remoteInfo = BubbleTransition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5B3F8521B184AB100729E6E /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B3F8561B184AB100729E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B3F8571B184AB100729E6E /* BubbleTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleTransition.h; sourceTree = "<group>"; };
+		A5B3F85D1B184AB200729E6E /* BubbleTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B3F8631B184AB200729E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B3F8641B184AB200729E6E /* BubbleTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTransitionTests.swift; sourceTree = "<group>"; };
+		A5B3F86E1B184B2100729E6E /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5B3F84E1B184AB100729E6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5B3F85A1B184AB200729E6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B3F85E1B184AB200729E6E /* BubbleTransition.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5B3F8481B184AB100729E6E = {
+			isa = PBXGroup;
+			children = (
+				A5B3F8541B184AB100729E6E /* BubbleTransition */,
+				A5B3F8611B184AB200729E6E /* BubbleTransitionTests */,
+				A5B3F8531B184AB100729E6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5B3F8531B184AB100729E6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5B3F8521B184AB100729E6E /* BubbleTransition.framework */,
+				A5B3F85D1B184AB200729E6E /* BubbleTransitionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5B3F8541B184AB100729E6E /* BubbleTransition */ = {
+			isa = PBXGroup;
+			children = (
+				A5B3F8571B184AB100729E6E /* BubbleTransition.h */,
+				A5B3F86E1B184B2100729E6E /* BubbleTransition.swift */,
+				A5B3F8551B184AB100729E6E /* Supporting Files */,
+			);
+			path = BubbleTransition;
+			sourceTree = "<group>";
+		};
+		A5B3F8551B184AB100729E6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5B3F8561B184AB100729E6E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5B3F8611B184AB200729E6E /* BubbleTransitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5B3F8641B184AB200729E6E /* BubbleTransitionTests.swift */,
+				A5B3F8621B184AB200729E6E /* Supporting Files */,
+			);
+			path = BubbleTransitionTests;
+			sourceTree = "<group>";
+		};
+		A5B3F8621B184AB200729E6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5B3F8631B184AB200729E6E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A5B3F84F1B184AB100729E6E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B3F8581B184AB100729E6E /* BubbleTransition.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A5B3F8511B184AB100729E6E /* BubbleTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5B3F8681B184AB200729E6E /* Build configuration list for PBXNativeTarget "BubbleTransition" */;
+			buildPhases = (
+				A5B3F84D1B184AB100729E6E /* Sources */,
+				A5B3F84E1B184AB100729E6E /* Frameworks */,
+				A5B3F84F1B184AB100729E6E /* Headers */,
+				A5B3F8501B184AB100729E6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BubbleTransition;
+			productName = BubbleTransition;
+			productReference = A5B3F8521B184AB100729E6E /* BubbleTransition.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A5B3F85C1B184AB200729E6E /* BubbleTransitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5B3F86B1B184AB200729E6E /* Build configuration list for PBXNativeTarget "BubbleTransitionTests" */;
+			buildPhases = (
+				A5B3F8591B184AB200729E6E /* Sources */,
+				A5B3F85A1B184AB200729E6E /* Frameworks */,
+				A5B3F85B1B184AB200729E6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5B3F8601B184AB200729E6E /* PBXTargetDependency */,
+			);
+			name = BubbleTransitionTests;
+			productName = BubbleTransitionTests;
+			productReference = A5B3F85D1B184AB200729E6E /* BubbleTransitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5B3F8491B184AB100729E6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Cosmic Labs";
+				TargetAttributes = {
+					A5B3F8511B184AB100729E6E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					A5B3F85C1B184AB200729E6E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A5B3F84C1B184AB100729E6E /* Build configuration list for PBXProject "BubbleTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A5B3F8481B184AB100729E6E;
+			productRefGroup = A5B3F8531B184AB100729E6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5B3F8511B184AB100729E6E /* BubbleTransition */,
+				A5B3F85C1B184AB200729E6E /* BubbleTransitionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5B3F8501B184AB100729E6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5B3F85B1B184AB200729E6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5B3F84D1B184AB100729E6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B3F86F1B184B2100729E6E /* BubbleTransition.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5B3F8591B184AB200729E6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B3F8651B184AB200729E6E /* BubbleTransitionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5B3F8601B184AB200729E6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5B3F8511B184AB100729E6E /* BubbleTransition */;
+			targetProxy = A5B3F85F1B184AB200729E6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A5B3F8661B184AB200729E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A5B3F8671B184AB200729E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A5B3F8691B184AB200729E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BubbleTransition/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A5B3F86A1B184AB200729E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BubbleTransition/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A5B3F86C1B184AB200729E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BubbleTransitionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A5B3F86D1B184AB200729E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BubbleTransitionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5B3F84C1B184AB100729E6E /* Build configuration list for PBXProject "BubbleTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B3F8661B184AB200729E6E /* Debug */,
+				A5B3F8671B184AB200729E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5B3F8681B184AB200729E6E /* Build configuration list for PBXNativeTarget "BubbleTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B3F8691B184AB200729E6E /* Debug */,
+				A5B3F86A1B184AB200729E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5B3F86B1B184AB200729E6E /* Build configuration list for PBXNativeTarget "BubbleTransitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B3F86C1B184AB200729E6E /* Debug */,
+				A5B3F86D1B184AB200729E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5B3F8491B184AB100729E6E /* Project object */;
+}
