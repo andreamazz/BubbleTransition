@@ -62,10 +62,10 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             let originalSize = presentedControllerView.frame.size
 
             bubble = UIView(frame: frameForBubble(originalCenter, size: originalSize, start: startingPoint))
-            bubble!.layer.cornerRadius = bubble!.frame.size.height / 2
-            bubble!.center = startingPoint
-            bubble!.transform = CGAffineTransformMakeScale(0.001, 0.001)
-            bubble!.backgroundColor = bubbleColor
+            bubble?.layer.cornerRadius = bubble!.frame.size.height / 2
+            bubble?.center = startingPoint
+            bubble?.transform = CGAffineTransformMakeScale(0.001, 0.001)
+            bubble?.backgroundColor = bubbleColor
             containerView.addSubview(bubble!)
             
             presentedControllerView.center = startingPoint
@@ -74,52 +74,38 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             containerView.addSubview(presentedControllerView)
             
             UIView.animateWithDuration(duration, animations: {
-                self.bubble!.transform = CGAffineTransformIdentity
+                self.bubble?.transform = CGAffineTransformIdentity
                 presentedControllerView.transform = CGAffineTransformIdentity
                 presentedControllerView.alpha = 1
                 presentedControllerView.center = originalCenter
-                }) { (_) -> Void in
-                    transitionContext.completeTransition(true)
-            }
-        } else if transitionMode == .Pop {
-            let returningControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-            let originalCenter = returningControllerView.center
-            let originalSize = returningControllerView.frame.size
-
-            bubble!.frame = frameForBubble(originalCenter, size: originalSize, start: startingPoint)
-            bubble!.layer.cornerRadius = bubble!.frame.size.height / 2
-            bubble!.center = startingPoint
-
-            UIView.animateWithDuration(duration, animations: {
-                self.bubble!.transform = CGAffineTransformMakeScale(0.001, 0.001)
-                returningControllerView.transform = CGAffineTransformMakeScale(0.001, 0.001)
-                returningControllerView.center = self.startingPoint
-                returningControllerView.alpha = 0
-                
-                containerView.insertSubview(returningControllerView, belowSubview: returningControllerView)
-                containerView.insertSubview(self.bubble!, belowSubview: returningControllerView)
-                }) { (_) -> Void in
-                    returningControllerView.removeFromSuperview()
-                    self.bubble!.removeFromSuperview()
+                }) { (_) in
                     transitionContext.completeTransition(true)
             }
         } else {
-            let returningControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+            let key = (transitionMode == .Pop) ? UITransitionContextToViewKey : UITransitionContextFromViewKey
+            let returningControllerView = transitionContext.viewForKey(key)!
             let originalCenter = returningControllerView.center
             let originalSize = returningControllerView.frame.size
 
-            bubble!.frame = frameForBubble(originalCenter, size: originalSize, start: startingPoint)
-            bubble!.layer.cornerRadius = bubble!.frame.size.height / 2
-            bubble!.center = startingPoint
+            if let bubble = bubble {
+                bubble.frame = frameForBubble(originalCenter, size: originalSize, start: startingPoint)
+                bubble.layer.cornerRadius = bubble.frame.size.height / 2
+                bubble.center = startingPoint
+            }
 
             UIView.animateWithDuration(duration, animations: {
-                self.bubble!.transform = CGAffineTransformMakeScale(0.001, 0.001)
+                self.bubble?.transform = CGAffineTransformMakeScale(0.001, 0.001)
                 returningControllerView.transform = CGAffineTransformMakeScale(0.001, 0.001)
                 returningControllerView.center = self.startingPoint
                 returningControllerView.alpha = 0
-                }) { (_) -> Void in
+               
+                if self.transitionMode == .Pop {
+                    containerView.insertSubview(returningControllerView, belowSubview: returningControllerView)
+                    containerView.insertSubview(self.bubble!, belowSubview: returningControllerView)
+                }
+                }) { (_) in
                     returningControllerView.removeFromSuperview()
-                    self.bubble!.removeFromSuperview()
+                    self.bubble?.removeFromSuperview()
                     transitionContext.completeTransition(true)
             }
         }
