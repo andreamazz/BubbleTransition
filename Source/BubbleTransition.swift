@@ -46,7 +46,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
     /**
     Required by UIViewControllerAnimatedTransitioning
     */
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
     }
     
@@ -66,12 +66,12 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
             bubble?.center = startingPoint
             bubble?.transform = CGAffineTransformMakeScale(0.001, 0.001)
             bubble?.backgroundColor = bubbleColor
-            containerView.addSubview(bubble!)
+            containerView!.addSubview(bubble!)
             
             presentedControllerView.center = startingPoint
             presentedControllerView.transform = CGAffineTransformMakeScale(0.001, 0.001)
             presentedControllerView.alpha = 0
-            containerView.addSubview(presentedControllerView)
+            containerView!.addSubview(presentedControllerView)
             
             UIView.animateWithDuration(duration, animations: {
                 self.bubble?.transform = CGAffineTransformIdentity
@@ -100,8 +100,8 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 returningControllerView.alpha = 0
                
                 if self.transitionMode == .Pop {
-                    containerView.insertSubview(returningControllerView, belowSubview: returningControllerView)
-                    containerView.insertSubview(self.bubble!, belowSubview: returningControllerView)
+                    containerView!.insertSubview(returningControllerView, belowSubview: returningControllerView)
+                    containerView!.insertSubview(self.bubble!, belowSubview: returningControllerView)
                 }
                 }) { (_) in
                     returningControllerView.removeFromSuperview()
