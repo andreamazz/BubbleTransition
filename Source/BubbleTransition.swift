@@ -46,7 +46,7 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
     /**
     Required by UIViewControllerAnimatedTransitioning
     */
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
     }
     
@@ -54,8 +54,13 @@ public class BubbleTransition: NSObject, UIViewControllerAnimatedTransitioning {
     Required by UIViewControllerAnimatedTransitioning
     */
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let containerView = transitionContext.containerView()
-        
+		
+		guard let containerView = transitionContext.containerView() else {
+			// let quit immediatly if containerView is nil
+			return
+		}
+
+		
         if transitionMode == .Present {
             let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
             let originalCenter = presentedControllerView.center
