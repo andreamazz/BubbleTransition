@@ -1,6 +1,6 @@
 {
   "name": "BubbleTransition",
-  "version": "0.1",
+  "version": "0.2",
   "license": "MIT",
   "summary": "A custom modal transition that presents and dismiss a controller with a bubble effect",
   "homepage": "https://github.com/andreamazz/BubbleTransition",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/andreamazz/BubbleTransition.git",
-    "tag": "0.1"
+    "tag": "0.2"
   },
   "platforms": {
     "ios": "8.0"
