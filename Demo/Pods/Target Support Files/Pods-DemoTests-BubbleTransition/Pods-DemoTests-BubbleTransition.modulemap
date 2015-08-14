@@ -1,0 +1,6 @@
+framework module BubbleTransition {
+  umbrella header "Pods-DemoTests-BubbleTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}

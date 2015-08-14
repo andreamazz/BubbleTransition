@@ -22,6 +22,14 @@ Install through [Carthage](https://github.com/Carthage/Carthage):
 github "andreamazz/BubbleTransition"
 ```
 
+## Swift 2.0 and iOS9
+If you are building with Xcode 7, targeting iOS9, checkout the `swift-2` branch:
+```
+pod 'BubbleTransition', git: 'https://github.com/andreamazz/BubbleTransition', branch: 'swift-2'
+
+use_frameworks!
+```
+
 #Setup
 Have your viewcontroller conform to `UIViewControllerTransitioningDelegate`. Set the `transitionMode`, the `startingPoint`, the `bubbleColor` and the `duration`.
 ```swift
