@@ -2,9 +2,14 @@
 All notable changes to this project will be documented in this file.
 `BubbleTransition` adheres to [Semantic Versioning](http://semver.org/).
 
-- `0.2.x` Releases - [0.2](#02)
+- `1.0.x` Releases - [1.0.0](#100) 
+- `0.2.x` Releases - [0.2](#02) 
 
 ---
 
-## [0.2](https://github.com/andreamazz/BubbleTransition/releases/tag/0.2)
+## [1.0.0](https://github.com/andreamazz/BubbleTransition/releases/tag/1.0.0)
 
+###Added
+- Support to Swift 2.0 syntax. checkout version 0.2 and previous for Swift 1.2.  
+
+## [0.2](https://github.com/andreamazz/BubbleTransition/releases/tag/0.2)
