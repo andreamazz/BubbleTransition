@@ -22,10 +22,10 @@ Install through [Carthage](https://github.com/Carthage/Carthage):
 github "andreamazz/BubbleTransition"
 ```
 
-## Swift 2.0 and iOS9
-If you are building with Xcode 7, targeting iOS9, checkout the `swift-2` branch:
+## Swift 1.2
+Version `1.0.0` targets Swift 2, if you are building with version `1.2` checkout the `swift-1.2` branch.
 ```
-pod 'BubbleTransition', git: 'https://github.com/andreamazz/BubbleTransition', branch: 'swift-2'
+pod 'BubbleTransition', git: 'https://github.com/andreamazz/BubbleTransition', branch: 'swift-1.2'
 
 use_frameworks!
 ```
@@ -36,10 +36,9 @@ Have your viewcontroller conform to `UIViewControllerTransitioningDelegate`. Set
 let transition = BubbleTransition()
 
 override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if let controller = segue.destinationViewController as? UIViewController {
-        controller.transitioningDelegate = self
-        controller.modalPresentationStyle = .Custom
-    }
+    let controller = segue.destinationViewController
+    controller.transitioningDelegate = self
+    controller.modalPresentationStyle = .Custom
 }
 
 // MARK: UIViewControllerTransitioningDelegate
