@@ -84,6 +84,9 @@ The color of the bubble. Make sure that it matches the destination controller's 
 
 Checkout the sample project for the full implementation.
 
+#Author
+[Andrea Mazzini](https://twitter.com/theandreamazz)
+
 #MIT License
 
 	Copyright (c) 2015 Andrea Mazzini. All rights reserved.
