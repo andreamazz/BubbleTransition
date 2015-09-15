@@ -16,10 +16,9 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     let transition = BubbleTransition()
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let controller = segue.destinationViewController as? UIViewController {
-            controller.transitioningDelegate = self
-            controller.modalPresentationStyle = .Custom
-        }
+        let controller = segue.destinationViewController
+        controller.transitioningDelegate = self
+        controller.modalPresentationStyle = .Custom
     }
 
     // MARK: UIViewControllerTransitioningDelegate
