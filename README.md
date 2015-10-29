@@ -1,11 +1,18 @@
 <p align="center">
-  <img src="assets/logo.png"/>
+  <img width="420" height="240" src="assets/logo.png"/>
 </p>
 
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/BubbleTransition/badge.svg)](http://cocoapods.org/?q=bubbletransition)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![Swift 2.0](https://img.shields.io/badge/swift-2.0-orange.svg)
 
 A custom modal transition that presents and dismiss a controller inside an expanding and shrinking _bubble_.
+
+<p align="center">
+  <a href='https://appetize.io/app/tck0418dftyfjxkqrfu34rwt44' alt='Live demo'>
+    <img width="50" height="60" src="assets/demo.png"/>
+  </a>
+</p>
 
 # Screenshot
 ![BubbleTransition](https://raw.githubusercontent.com/andreamazz/BubbleTransition/master/assets/screenshot.gif)
@@ -13,7 +20,7 @@ A custom modal transition that presents and dismiss a controller inside an expan
 # Usage
 Install through [Cocoapods](http://cocoapods.org):
 ```
-pod 'BubbleTransition', '~> 0.1'
+pod 'BubbleTransition', '~> 1.0.0'
 
 use_frameworks!
 ```
@@ -84,7 +91,12 @@ The color of the bubble. Make sure that it matches the destination controller's 
 Checkout the sample project for the full implementation.
 
 #Author
-[Andrea Mazzini](https://twitter.com/theandreamazz)
+[Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me. 
+
+Want to support the development of [these free libraries](https://cocoapods.org/owners/734)? Buy me a coffee ☕️ via [Paypal](https://www.paypal.me/andreamazzini).  
+
+#Contributors
+Thanks to [everyone](https://github.com/andreamazz/BubbleTransition/graphs/contributors) kind enough to submit a pull request. 
 
 #MIT License
 
