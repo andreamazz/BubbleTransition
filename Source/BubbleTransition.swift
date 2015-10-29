@@ -68,7 +68,10 @@ public class BubbleTransition: NSObject {
 
     /**
     The possible directions of the transition.
-    Possible values `.Present`, `.Dismiss` or `.Pop`
+     
+     - Present: For presenting a new modal controller
+     - Dismiss: For dismissing the current controller
+     - Pop: For a pop animation in a navigation controller
     */
     @objc public enum BubbleTransitionMode: Int {
         case Present, Dismiss, Pop
