@@ -56,6 +56,7 @@ public class BubbleTransition: NSObject {
     
     /**
     The transition direction. Possible values `.Present`, `.Dismiss` or `.Pop`
+     Defaults to `.Present`
     */
     public var transitionMode: BubbleTransitionMode = .Present
     

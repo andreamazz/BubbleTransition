@@ -63,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		653CAEDF1BEE486500F1BF0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				659891501B032E3B00BF6CD9 /* Main.storyboard */,
+				659891531B032E3B00BF6CD9 /* Images.xcassets */,
+				659891551B032E3B00BF6CD9 /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		6598913E1B032E3B00BF6CD9 = {
 			isa = PBXGroup;
 			children = (
@@ -86,12 +96,10 @@
 		659891491B032E3B00BF6CD9 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				653CAEDF1BEE486500F1BF0A /* Resources */,
 				6598914C1B032E3B00BF6CD9 /* AppDelegate.swift */,
 				6598914E1B032E3B00BF6CD9 /* ViewController.swift */,
 				6553B82A1B0330220056A225 /* ModalViewController.swift */,
-				659891501B032E3B00BF6CD9 /* Main.storyboard */,
-				659891531B032E3B00BF6CD9 /* Images.xcassets */,
-				659891551B032E3B00BF6CD9 /* LaunchScreen.xib */,
 				6598914A1B032E3B00BF6CD9 /* Supporting Files */,
 			);
 			path = Demo;

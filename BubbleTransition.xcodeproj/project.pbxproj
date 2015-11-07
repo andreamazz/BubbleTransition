@@ -101,6 +101,7 @@
 		A5B3F8491B184AB100729E6E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Cosmic Labs";
 				TargetAttributes = {
