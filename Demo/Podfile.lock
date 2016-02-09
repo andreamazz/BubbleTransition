@@ -1,5 +1,5 @@
 PODS:
-  - BubbleTransition (0.2)
+  - BubbleTransition (1.0.1)
 
 DEPENDENCIES:
   - BubbleTransition (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BubbleTransition: 6ee83cedb8b9eb2a9489e11b0e0c666f3916bb2c
+  BubbleTransition: 76d5e306dbda0f622260ea7d082c971d976422ab
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0
