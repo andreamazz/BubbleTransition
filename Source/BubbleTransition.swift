@@ -145,6 +145,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
                     containerView.insertSubview(self.bubble, belowSubview: returningControllerView)
                 }
                 }) { (_) in
+                    returningControllerView.center = originalCenter;
                     returningControllerView.removeFromSuperview()
                     self.bubble.removeFromSuperview()
                     transitionContext.completeTransition(true)
