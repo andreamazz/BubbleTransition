@@ -65,7 +65,7 @@ public class BubbleTransition: NSObject {
     */
     public var bubbleColor: UIColor = .whiteColor()
     
-    private var bubble = UIView()
+    public private(set) var bubble = UIView()
 
     /**
     The possible directions of the transition.
