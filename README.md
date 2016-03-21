@@ -2,7 +2,7 @@
   <img width="420" height="240" src="assets/logo.png"/>
 </p>
 
-[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/BubbleTransition/badge.svg)](http://cocoapods.org/?q=bubbletransition)
+[![CocoaPods](https://cocoapod-badges.herokuapp.com/v/BubbleTransition/badge.svg)](http://cocoapods.org/?q=bubbletransition)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Swift 2.0](https://img.shields.io/badge/swift-2.0-orange.svg)
 
@@ -18,7 +18,7 @@ A custom modal transition that presents and dismiss a controller inside an expan
 ![BubbleTransition](https://raw.githubusercontent.com/andreamazz/BubbleTransition/master/assets/screenshot.gif)
 
 # Usage
-Install through [Cocoapods](http://cocoapods.org):
+Install through [CocoaPods](http://cocoapods.org):
 ```
 pod 'BubbleTransition', '~> 1.0.0'
 
