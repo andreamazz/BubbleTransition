@@ -5,6 +5,7 @@
 [![CocoaPods](https://cocoapod-badges.herokuapp.com/v/BubbleTransition/badge.svg)](http://cocoapods.org/?q=bubbletransition)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Swift 2.0](https://img.shields.io/badge/swift-2.0-orange.svg)
+[![codebeat badge](https://codebeat.co/badges/45635139-6294-4ac8-9f39-6f1d3b18dd23)](https://codebeat.co/projects/github-com-andreamazz-bubbletransition)
 
 A custom modal transition that presents and dismiss a controller inside an expanding and shrinking _bubble_.
 
