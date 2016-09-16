@@ -13,23 +13,23 @@ import UIKit
 
  - Prepare the transition:
  ```swift
- override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     let controller = segue.destinationViewController
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     let controller = segue.destination
      controller.transitioningDelegate = self
-     controller.modalPresentationStyle = .Custom
+     controller.modalPresentationStyle = .custom
  }
  ```
  - Implement UIViewControllerTransitioningDelegate:
  ```swift
- func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-     transition.transitionMode = .Present
+ func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+     transition.transitionMode = .present
      transition.startingPoint = someButton.center
      transition.bubbleColor = someButton.backgroundColor!
      return transition
  }
 
- func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-     transition.transitionMode = .Dismiss
+ func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+     transition.transitionMode = .dismiss
      transition.startingPoint = someButton.center
      transition.bubbleColor = someButton.backgroundColor!
      return transition
@@ -55,7 +55,7 @@ open class BubbleTransition: NSObject {
     open var duration = 0.5
     
     /**
-    The transition direction. Possible values `.Present`, `.Dismiss` or `.Pop`
+    The transition direction. Possible values `.present`, `.dismiss` or `.pop`
      Defaults to `.Present`
     */
     open var transitionMode: BubbleTransitionMode = .present

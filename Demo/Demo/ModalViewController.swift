@@ -13,18 +13,18 @@ class ModalViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
 
     override func viewDidLoad() {
-        closeButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4))
+        closeButton.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_4))
     }
 
-    @IBAction func closeAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func closeAction(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 
-    override func viewWillAppear(animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
     }
 
-    override func viewWillDisappear(animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: true)
+    override func viewWillDisappear(_ animated: Bool) {
+        UIApplication.shared.setStatusBarStyle(.default, animated: true)
     }
 }
