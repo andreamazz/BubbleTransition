@@ -43,23 +43,23 @@ Have your viewcontroller conform to `UIViewControllerTransitioningDelegate`. Set
 ```swift
 let transition = BubbleTransition()
 
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    let controller = segue.destinationViewController
-    controller.transitioningDelegate = self
-    controller.modalPresentationStyle = .Custom
+   public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let controller = segue.destination
+       controller.transitioningDelegate = self
+       controller.modalPresentationStyle = .custom
 }
 
 // MARK: UIViewControllerTransitioningDelegate
 
-func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    transition.transitionMode = .Present
+   public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    transition.transitionMode = .present
     transition.startingPoint = someButton.center
     transition.bubbleColor = someButton.backgroundColor!
     return transition
 }
 
-func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    transition.transitionMode = .Dismiss
+  public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    transition.transitionMode = .dismiss
     transition.startingPoint = someButton.center
     transition.bubbleColor = someButton.backgroundColor!
     return transition
@@ -80,12 +80,12 @@ var duration = 0.5
 The transition duration.
 
 ```swift
-var transitionMode: BubbleTranisionMode = .Present
+var transitionMode: BubbleTranisionMode = .present
 ```
-The transition direction. Either `.Present`, `.Dismiss` or `.Pop`.
+The transition direction. Either `.present`, `.dismiss` or `.pop`.
 
 ```swift
-var bubbleColor: UIColor = .whiteColor()
+var bubbleColor: UIColor = .white
 ```
 The color of the bubble. Make sure that it matches the destination controller's background color.  
 
