@@ -43,26 +43,26 @@ Have your viewcontroller conform to `UIViewControllerTransitioningDelegate`. Set
 ```swift
 let transition = BubbleTransition()
 
-   public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       let controller = segue.destination
-       controller.transitioningDelegate = self
-       controller.modalPresentationStyle = .custom
+public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  let controller = segue.destination
+  controller.transitioningDelegate = self
+  controller.modalPresentationStyle = .custom
 }
 
 // MARK: UIViewControllerTransitioningDelegate
 
-   public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    transition.transitionMode = .present
-    transition.startingPoint = someButton.center
-    transition.bubbleColor = someButton.backgroundColor!
-    return transition
+public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+  transition.transitionMode = .present
+  transition.startingPoint = someButton.center
+  transition.bubbleColor = someButton.backgroundColor!
+  return transition
 }
 
-  public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    transition.transitionMode = .dismiss
-    transition.startingPoint = someButton.center
-    transition.bubbleColor = someButton.backgroundColor!
-    return transition
+public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+  transition.transitionMode = .dismiss
+  transition.startingPoint = someButton.center
+  transition.bubbleColor = someButton.backgroundColor!
+  return transition
 }
 ```
 
