@@ -31,7 +31,7 @@ Improved documentation. Minor refactoring.
 
 ## [1.0.0](https://github.com/andreamazz/BubbleTransition/releases/tag/1.0.0)
 
-###Added
+### Added
 - Support to Swift 2.0 syntax. checkout version 0.2 and previous for Swift 1.2.  
 
 ## [0.2](https://github.com/andreamazz/BubbleTransition/releases/tag/0.2)
