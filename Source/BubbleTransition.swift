@@ -128,7 +128,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
                 presentedControllerView.center = originalCenter
                 }, completion: { (_) in
                     transitionContext.completeTransition(true)
-                    
+                    self.bubble.isHidden = true
                     fromViewController?.endAppearanceTransition()
                     toViewController?.endAppearanceTransition()
             })
@@ -141,6 +141,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
             bubble.frame = frameForBubble(originalCenter, size: originalSize, start: startingPoint)
             bubble.layer.cornerRadius = bubble.frame.size.height / 2
             bubble.center = startingPoint
+            bubble.isHidden = false
 
             UIView.animate(withDuration: duration, animations: {
                 self.bubble.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
