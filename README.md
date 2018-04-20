@@ -4,14 +4,14 @@
 
 [![CocoaPods](https://cocoapod-badges.herokuapp.com/v/BubbleTransition/badge.svg)](http://cocoapods.org/?q=bubbletransition)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift 3.0](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift 4.0](https://img.shields.io/badge/swift-3.0-orange.svg)
 [![codebeat badge](https://codebeat.co/badges/45635139-6294-4ac8-9f39-6f1d3b18dd23)](https://codebeat.co/projects/github-com-andreamazz-bubbletransition)
 
 A custom modal transition that presents and dismiss a controller inside an expanding and shrinking _bubble_.
 
 <p align="center">
   <a href='https://appetize.io/app/tck0418dftyfjxkqrfu34rwt44' alt='Live demo'>
-    <img width="50" height="60" src="assets/demo.png"/>
+    <img width="150" height="75" src="assets/demo-button.png"/>
   </a>
 </p>
 
@@ -28,14 +28,6 @@ use_frameworks!
 Install through [Carthage](https://github.com/Carthage/Carthage):
 ```
 github "andreamazz/BubbleTransition"
-```
-
-## Swift 1.2
-Version `1.0.0` targets Swift 2, if you are building with version `1.2` checkout the `swift-1.2` branch.
-```
-pod 'BubbleTransition', git: 'https://github.com/andreamazz/BubbleTransition', branch: 'swift-1.2'
-
-use_frameworks!
 ```
 
 # Setup
