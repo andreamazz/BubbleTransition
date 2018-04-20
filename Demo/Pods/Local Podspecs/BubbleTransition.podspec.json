@@ -1,6 +1,6 @@
 {
   "name": "BubbleTransition",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "license": "MIT",
   "summary": "A custom modal transition that presents and dismiss a controller with a bubble effect",
   "description": "Easy to use custom modal animation that presents the new controller\nwithin a bubble, expanding to cover the whole screen.",
@@ -11,11 +11,12 @@
   },
   "source": {
     "git": "https://github.com/andreamazz/BubbleTransition.git",
-    "tag": "2.0.0"
+    "tag": "3.0.0"
   },
   "platforms": {
     "ios": "8.0"
   },
+  "swift_version": "4.0",
   "source_files": "Source/*.swift",
   "requires_arc": true
 }
