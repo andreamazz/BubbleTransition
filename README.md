@@ -31,7 +31,7 @@ github "andreamazz/BubbleTransition"
 ```
 
 # Setup
-Have your viewcontroller conform to `UIViewControllerTransitioningDelegate`. Set the `transitionMode`, the `startingPoint`, the `bubbleColor` and the `duration`.
+Have your view controller conform to `UIViewControllerTransitioningDelegate`. Set the `transitionMode`, the `startingPoint`, the `bubbleColor` and the `duration`.
 ```swift
 let transition = BubbleTransition()
 
