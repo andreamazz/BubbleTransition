@@ -100,10 +100,12 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
     let fromViewController = transitionContext.viewController(forKey: .from)
     let toViewController = transitionContext.viewController(forKey: .to)
     
-    fromViewController?.beginAppearanceTransition(false, animated: true)
-    toViewController?.beginAppearanceTransition(true, animated: true)
-    
     if transitionMode == .present {
+      fromViewController?.beginAppearanceTransition(false, animated: true)
+      if toViewController?.modalPresentationStyle == .custom {
+        toViewController?.beginAppearanceTransition(true, animated: true)
+      }
+      
       let presentedControllerView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
       let originalCenter = presentedControllerView.center
       let originalSize = presentedControllerView.frame.size
@@ -130,9 +132,16 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
         transitionContext.completeTransition(true)
         self.bubble.isHidden = true
         fromViewController?.endAppearanceTransition()
-        toViewController?.endAppearanceTransition()
+        if toViewController?.modalPresentationStyle == .custom {
+          toViewController?.endAppearanceTransition()
+        }
       })
     } else {
+      if fromViewController?.modalPresentationStyle == .custom {
+        fromViewController?.beginAppearanceTransition(false, animated: true)
+      }
+      toViewController?.beginAppearanceTransition(true, animated: true)
+      
       let key = (transitionMode == .pop) ? UITransitionContextViewKey.to : UITransitionContextViewKey.from
       let returningControllerView = transitionContext.view(forKey: key)!
       let originalCenter = returningControllerView.center
@@ -159,7 +168,9 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
         self.bubble.removeFromSuperview()
         transitionContext.completeTransition(true)
         
-        fromViewController?.endAppearanceTransition()
+        if fromViewController?.modalPresentationStyle == .custom {
+          fromViewController?.endAppearanceTransition()
+        }
         toViewController?.endAppearanceTransition()
       })
     }
