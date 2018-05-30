@@ -149,6 +149,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
       
       bubble.frame = frameForBubble(originalCenter, size: originalSize, start: startingPoint)
       bubble.layer.cornerRadius = bubble.frame.size.height / 2
+      bubble.backgroundColor = bubbleColor
       bubble.center = startingPoint
       bubble.isHidden = false
       
