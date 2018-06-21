@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'BubbleTransition'
-  s.version = '3.0.1'
+  s.version = '3.0.2'
   s.license = 'MIT'
   s.summary = 'A custom modal transition that presents and dismiss a controller with a bubble effect'
   s.description  = <<-DESC
