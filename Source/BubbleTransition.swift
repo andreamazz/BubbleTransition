@@ -14,25 +14,25 @@ import UIKit
  - Prepare the transition:
  ```swift
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- let controller = segue.destination
- controller.transitioningDelegate = self
- controller.modalPresentationStyle = .custom
+   let controller = segue.destination
+   controller.transitioningDelegate = self
+   controller.modalPresentationStyle = .custom
  }
  ```
  - Implement UIViewControllerTransitioningDelegate:
  ```swift
- func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
- transition.transitionMode = .present
- transition.startingPoint = someButton.center
- transition.bubbleColor = someButton.backgroundColor!
- return transition
+   func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+   transition.transitionMode = .present
+   transition.startingPoint = someButton.center
+   transition.bubbleColor = someButton.backgroundColor!
+   return transition
  }
  
  func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
- transition.transitionMode = .dismiss
- transition.startingPoint = someButton.center
- transition.bubbleColor = someButton.backgroundColor!
- return transition
+   transition.transitionMode = .dismiss
+   transition.startingPoint = someButton.center
+   transition.bubbleColor = someButton.backgroundColor!
+   return transition
  }
  ```
  */
@@ -106,7 +106,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
         toViewController?.beginAppearanceTransition(true, animated: true)
       }
       
-      let presentedControllerView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
+      let presentedControllerView = transitionContext.view(forKey: .to)!
       let originalCenter = presentedControllerView.center
       let originalSize = presentedControllerView.frame.size
       
@@ -142,7 +142,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
       }
       toViewController?.beginAppearanceTransition(true, animated: true)
       
-      let key = (transitionMode == .pop) ? UITransitionContextViewKey.to : UITransitionContextViewKey.from
+      let key: UITransitionContextViewKey = (transitionMode == .pop) ? .to : .from
       let returningControllerView = transitionContext.view(forKey: key)!
       let originalCenter = returningControllerView.center
       let originalSize = returningControllerView.frame.size
