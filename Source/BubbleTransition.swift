@@ -106,7 +106,6 @@ open class BubbleInteractiveTransition: UIPercentDrivenInteractiveTransition {
       interactionStarted = true
       controller.dismiss(animated: true, completion: nil)
     case .changed:
-      print(progress)
       interactionShouldFinish = progress > interactionThreshold
       update(progress)
     case .cancelled:
