@@ -13,11 +13,13 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
   @IBOutlet weak var transitionButton: UIButton!
   
   let transition = BubbleTransition()
+  let interactiveTransition = BubbleInteractiveTransition()
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let controller = segue.destination
     controller.transitioningDelegate = self
     controller.modalPresentationStyle = .custom
+    interactiveTransition.attach(to: controller)
   }
   
   // MARK: UIViewControllerTransitioningDelegate
@@ -34,6 +36,10 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     transition.startingPoint = transitionButton.center
     transition.bubbleColor = transitionButton.backgroundColor!
     return transition
+  }
+  
+  func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    return interactiveTransition
   }
   
 }

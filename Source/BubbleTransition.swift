@@ -79,6 +79,48 @@ open class BubbleTransition: NSObject {
   }
 }
 
+open class BubbleInteractiveTransition: UIPercentDrivenInteractiveTransition {
+  fileprivate var interactionStarted = false
+  fileprivate var interactionShouldFinish = false
+  fileprivate var controller: UIViewController?
+  
+  open var interactionThreshold: CGFloat = 0.3
+  
+  open func attach(to: UIViewController) {
+    controller = to
+    controller?.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(BubbleInteractiveTransition.handlePan(gesture:))))
+  }
+  
+  @objc open func handlePan(gesture: UIPanGestureRecognizer) {
+    guard let controller = controller, let view = controller.view else { return }
+    
+    let translation = gesture.translation(in: controller.view.superview)
+    
+    let delta = translation.y / view.bounds.height
+    let movement = fmaxf(Float(delta), 0.0)
+    let percent = fminf(movement, 1.0)
+    let progress = CGFloat(percent)
+
+    switch gesture.state {
+    case .began:
+      interactionStarted = true
+      controller.dismiss(animated: true, completion: nil)
+    case .changed:
+      print(progress)
+      interactionShouldFinish = progress > interactionThreshold
+      update(progress)
+    case .cancelled:
+      interactionShouldFinish = false
+      fallthrough
+    case .ended:
+      interactionStarted = false
+      interactionShouldFinish ? finish() : cancel()
+    default:
+      break
+    }
+  }
+}
+
 extension BubbleTransition: UIViewControllerAnimatedTransitioning {
   
   // MARK: - UIViewControllerAnimatedTransitioning
@@ -131,10 +173,10 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
       }, completion: { (_) in
         transitionContext.completeTransition(true)
         self.bubble.isHidden = true
-        fromViewController?.endAppearanceTransition()
         if toViewController?.modalPresentationStyle == .custom {
           toViewController?.endAppearanceTransition()
         }
+        fromViewController?.endAppearanceTransition()
       })
     } else {
       if fromViewController?.modalPresentationStyle == .custom {
@@ -163,16 +205,19 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
           containerView.insertSubview(returningControllerView, belowSubview: returningControllerView)
           containerView.insertSubview(self.bubble, belowSubview: returningControllerView)
         }
-      }, completion: { (_) in
-        returningControllerView.center = originalCenter
-        returningControllerView.removeFromSuperview()
-        self.bubble.removeFromSuperview()
-        transitionContext.completeTransition(true)
+      }, completion: { (completed) in
+        transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         
-        if fromViewController?.modalPresentationStyle == .custom {
-          fromViewController?.endAppearanceTransition()
+        if !transitionContext.transitionWasCancelled {
+          returningControllerView.center = originalCenter
+          returningControllerView.removeFromSuperview()
+          self.bubble.removeFromSuperview()
+
+          if fromViewController?.modalPresentationStyle == .custom {
+            fromViewController?.endAppearanceTransition()
+          }
+          toViewController?.endAppearanceTransition()
         }
-        toViewController?.endAppearanceTransition()
       })
     }
   }
