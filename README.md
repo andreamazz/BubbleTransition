@@ -60,6 +60,35 @@ public func animationController(forDismissed dismissed: UIViewController) -> UIV
 
 You can find the Objective-C equivalent [here](https://gist.github.com/andreamazz/9b0d6c7db065555ec0d7).
 
+# Swipe to dismiss
+
+You can use an interactive gesture to dismiss the presented controller. To enable this gesture, prepare the interactive transition:
+
+```swift
+let interactiveTransition = BubbleInteractiveTransition()
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  let controller = segue.destination
+  controller.transitioningDelegate = self
+  controller.modalPresentationStyle = .custom
+  interactiveTransition.attach(to: controller)
+}
+```
+
+and implement `interactionControllerForDismissal` in your presenting controller:
+
+```swift
+func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+  return interactiveTransition
+}
+```
+
+You can decide the gesture threshold and the swipe direction:
+```swift
+interactiveTransition.interactionThreshold = 0.5
+interactionThreshold.swipeDirection = .up
+```
+
 # Properties
 ```swift
 var startingPoint = CGPointZero
