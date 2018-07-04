@@ -2,12 +2,17 @@
 All notable changes to this project will be documented in this file.
 `BubbleTransition` adheres to [Semantic Versioning](http://semver.org/).
 
+- `3.1.x` Releases - [3.1.0](#310)  
 - `3.0.x` Releases - [3.0.0](#300) | [3.0.1](#301) | [3.0.2](#302)  
 - `2.0.x` Releases - [2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202)  
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102) | [1.0.3](#103)   
 - `0.2.x` Releases - [0.2](#02)
 
 ---
+
+## [3.1.0](https://github.com/andreamazz/BubbleTransition/releases/tag/3.1.0)
+
+- Added `BubbleInteractiveTransition`  
 
 ## [3.0.2](https://github.com/andreamazz/BubbleTransition/releases/tag/3.0.2)
 
