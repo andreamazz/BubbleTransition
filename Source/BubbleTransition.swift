@@ -42,7 +42,7 @@ open class BubbleTransition: NSObject {
    The point that originates the bubble. The bubble starts from this point
    and shrinks to it on dismiss
    */
-  open var startingPoint = CGPoint.zero {
+  @objc open var startingPoint = CGPoint.zero {
     didSet {
       bubble.center = startingPoint
     }
@@ -52,18 +52,18 @@ open class BubbleTransition: NSObject {
    The transition duration. The same value is used in both the Present or Dismiss actions
    Defaults to `0.5`
    */
-  open var duration = 0.5
+  @objc open var duration = 0.5
   
   /**
    The transition direction. Possible values `.present`, `.dismiss` or `.pop`
    Defaults to `.Present`
    */
-  open var transitionMode: BubbleTransitionMode = .present
+  @objc open var transitionMode: BubbleTransitionMode = .present
   
   /**
    The color of the bubble. Make sure that it matches the destination controller's background color.
    */
-  open var bubbleColor: UIColor = .white
+  @objc open var bubbleColor: UIColor = .white
   
   open fileprivate(set) var bubble = UIView()
   
