@@ -85,6 +85,8 @@ func interactionControllerForDismissal(using animator: UIViewControllerAnimatedT
 }
 ```
 
+In the presented controller make sure to call `finish()` on the interactive gesture if you need to quickly dismiss from a button press instead. Check the sample code for more info.  
+
 You can decide the gesture threshold and the swipe direction:
 ```swift
 interactiveTransition.interactionThreshold = 0.5

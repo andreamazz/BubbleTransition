@@ -20,6 +20,8 @@ class ModalViewController: UIViewController {
   
   @IBAction func closeAction(_ sender: AnyObject) {
     self.dismiss(animated: true, completion: nil)
+    
+    // NOTE: when using interactive gestures, if you want to dismiss with a button instead, you need to call finish on the interactive transition to avoid having the animation stuck
     interactiveTransition?.finish()
   }
   
