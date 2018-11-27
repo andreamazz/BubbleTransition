@@ -123,13 +123,15 @@ open class BubbleInteractiveTransition: UIPercentDrivenInteractiveTransition {
   /// The swipe direction
   open var swipeDirection: BubbleInteractiveTransitionSwipeDirection = .down
   
-  
   /// Attach the swipe gesture to a controller
   ///
   /// - Parameter to: the target controller
   open func attach(to: UIViewController) {
     controller = to
     controller?.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(BubbleInteractiveTransition.handlePan(gesture:))))
+    if #available(iOS 10.0, *) {
+      wantsInteractiveStart = false
+    }
   }
   
   @objc func handlePan(gesture: UIPanGestureRecognizer) {

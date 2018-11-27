@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import BubbleTransition
 
 class ModalViewController: UIViewController {
   @IBOutlet weak var closeButton: UIButton!
+  weak var interactiveTransition: BubbleInteractiveTransition?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -18,6 +20,7 @@ class ModalViewController: UIViewController {
   
   @IBAction func closeAction(_ sender: AnyObject) {
     self.dismiss(animated: true, completion: nil)
+    interactiveTransition?.finish()
   }
   
   override func viewWillAppear(_ animated: Bool) {
