@@ -126,9 +126,11 @@ open class BubbleInteractiveTransition: UIPercentDrivenInteractiveTransition {
   /// Attach the swipe gesture to a controller
   ///
   /// - Parameter to: the target controller
-  open func attach(to: UIViewController) {
+  open func attach(to: UIViewController, allowGesture: Bool = true) {
     controller = to
-    controller?.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(BubbleInteractiveTransition.handlePan(gesture:))))
+    if allowGesture {
+      controller?.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(BubbleInteractiveTransition.handlePan(gesture:))))
+    }
     if #available(iOS 10.0, *) {
       wantsInteractiveStart = false
     }
