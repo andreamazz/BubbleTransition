@@ -21,7 +21,7 @@ A custom modal transition that presents and dismiss a controller inside an expan
 # Usage
 Install through [CocoaPods](http://cocoapods.org):
 ```
-pod 'BubbleTransition', '~> 3.0.0'
+pod 'BubbleTransition', '~> 3.2.0'
 
 use_frameworks!
 ```
