@@ -38,6 +38,7 @@ let transition = BubbleTransition()
 public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   let controller = segue.destination
   controller.transitioningDelegate = self
+  controller.modalPresentationCapturesStatusBarAppearance = true
   controller.modalPresentationStyle = .custom
 }
 
@@ -71,6 +72,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if let controller = segue.destination as? ModalViewController {
     controller.transitioningDelegate = self
     controller.modalPresentationStyle = .custom
+    controller.modalPresentationCapturesStatusBarAppearance = true
     controller.interactiveTransition = interactiveTransition
     interactiveTransition.attach(to: controller)
   }
@@ -126,7 +128,7 @@ Thanks to [everyone](https://github.com/andreamazz/BubbleTransition/graphs/contr
 
 # MIT License
 
-	Copyright (c) 2018 Andrea Mazzini. All rights reserved.
+	Copyright (c) 2018-2020 Andrea Mazzini. All rights reserved.
 
 	Permission is hereby granted, free of charge, to any person obtaining a
 	copy of this software and associated documentation files (the "Software"),

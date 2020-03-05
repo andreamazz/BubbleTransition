@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     if let controller = segue.destination as? ModalViewController {
       controller.transitioningDelegate = self
       controller.modalPresentationStyle = .custom
+      controller.modalPresentationCapturesStatusBarAppearance = true
       controller.interactiveTransition = interactiveTransition
       interactiveTransition.attach(to: controller)
     }
