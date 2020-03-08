@@ -30,14 +30,14 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
   func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     transition.transitionMode = .present
     transition.startingPoint = transitionButton.center
-    transition.bubbleColor = transitionButton.backgroundColor!
+    transition.bubbleColor = transitionButton.backgroundColor ?? .black
     return transition
   }
   
   func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     transition.transitionMode = .dismiss
     transition.startingPoint = transitionButton.center
-    transition.bubbleColor = transitionButton.backgroundColor!
+    transition.bubbleColor = transitionButton.backgroundColor ?? .black
     return transition
   }
   

@@ -47,14 +47,14 @@ public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
   transition.transitionMode = .present
   transition.startingPoint = someButton.center
-  transition.bubbleColor = someButton.backgroundColor!
+  transition.bubbleColor = someButton.backgroundColor ?? .black
   return transition
 }
 
 public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
   transition.transitionMode = .dismiss
   transition.startingPoint = someButton.center
-  transition.bubbleColor = someButton.backgroundColor!
+  transition.bubbleColor = someButton.backgroundColor ?? .black
   return transition
 }
 ```
