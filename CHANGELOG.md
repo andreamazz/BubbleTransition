@@ -2,6 +2,7 @@
 All notable changes to this project will be documented in this file.
 `BubbleTransition` adheres to [Semantic Versioning](http://semver.org/).
 
+- `4.1.x` Releases - [4.1.0](#410)  
 - `4.0.x` Releases - [4.0.0](#400)
 - `3.2.x` Releases - [3.2.0](#320)
 - `3.1.x` Releases - [3.1.0](#310) | [3.1.1](#311)
@@ -11,6 +12,10 @@ All notable changes to this project will be documented in this file.
 - `0.2.x` Releases - [0.2](#02)
 
 ---
+
+## [4.1.0](https://github.com/andreamazz/BubbleTransition/releases/tag/4.1.0)
+
+- Add SPM support  
 
 ## [4.0.0](https://github.com/andreamazz/BubbleTransition/releases/tag/4.0.0)
 
