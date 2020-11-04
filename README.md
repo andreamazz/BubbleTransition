@@ -31,13 +31,13 @@ github "andreamazz/BubbleTransition"
 ```
 
 Install through [Swift Package Manager](https://swift.org/package-manager/):
-```
-To integrate using Xcode:
 
-`File` -> `Swift Packages` -> `Add Package Dependency...`
+To integrate using Xcode:  
 
-Enter package URL: `https://github.com/andreamazz/BubbleTransition`, and select the latest release.
-```
+`File` -> `Swift Packages` -> `Add Package Dependency...`  
+
+Enter package URL: `https://github.com/andreamazz/BubbleTransition`, and select the latest release. 
+
 
 # Setup
 Have your view controller conform to `UIViewControllerTransitioningDelegate`. Set the `transitionMode`, the `startingPoint`, the `bubbleColor` and the `duration`.
