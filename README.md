@@ -34,9 +34,9 @@ Install through [Swift Package Manager](https://swift.org/package-manager/):
 ```
 To integrate using Xcode:
 
-File -> Swift Packages -> Add Package Dependency...
+`File` -> `Swift Packages` -> `Add Package Dependency...`
 
-Enter package URL: https://github.com/andreamazz/BubbleTransition, and select the latest release.
+Enter package URL: `https://github.com/andreamazz/BubbleTransition`, and select the latest release.
 ```
 
 # Setup
